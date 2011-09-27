@@ -1,4 +1,4 @@
-from django import forms
+from django import newforms as forms
 from django_ogone import settings as ogone_settings
 
 class OgoneForm(forms.Form):
