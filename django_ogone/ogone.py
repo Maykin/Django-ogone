@@ -105,7 +105,7 @@ class Ogone(object):
 
     @staticmethod
     def _parse_orderid(params):
-        params.update({'ORDERID': int(params.get('ORDERID'))})
+        params.update({'ORDERID': params.get('ORDERID')})
 
         return params
 
