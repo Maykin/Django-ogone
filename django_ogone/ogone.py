@@ -189,6 +189,11 @@ class Ogone(object):
         self.parsed or self.parse_params()
 
         return self.parsed_params['STATUS']
+    
+    def get_pay_id(self):
+        self.parsed or self.parse_params()
+
+        return self.parsed_params['PAYID']
 
     def get_transaction_date(self):
         self.parsed or self.parse_params()
