@@ -9,3 +9,9 @@
 *.pyc
 .pydevproject
 .project
+.Python
+/bin/
+/include/
+/lib/
+/man/
+/test_project/
