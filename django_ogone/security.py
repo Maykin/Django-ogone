@@ -84,8 +84,8 @@ class OgoneSignature(object):
         if v == '' or v is None:
             valid = False
 
-        if not self.out and k.upper() in SHA_IN_FILTER_WORDS: valid = False
-        if self.out and k.upper() in SHA_OUT_FILTER_WORDS: valid = False
+        if not self.out and k.upper() not in SHA_IN_FILTER_WORDS: valid = False
+        if self.out and k.upper() not in SHA_OUT_FILTER_WORDS: valid = False
 
         if k == 'SHASIGN':
             valid = False
