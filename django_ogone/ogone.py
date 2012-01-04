@@ -221,7 +221,7 @@ class Ogone(object):
 
         return ogone_security.OgoneSignature(data,
                     hash_method=hash_method,
-                    secret=secret).signature()
+                    secret=secret, out=out).signature()
 
 
 
