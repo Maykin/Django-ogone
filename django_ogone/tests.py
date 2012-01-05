@@ -21,7 +21,7 @@ class OgoneTestCase(unittest.TestCase):
         params = {u'ORDERID': u'13', u'STATUS': u'9', u'CARDNO': u'XXXXXXXXXXXX1111', u'VC': u'NO', u'PAYID': u'8285812', u'CN': u'Kaast Achternaam', u'NCERROR': u'0', u'IP': u'82.139.114.10', u'IPCTY': u'NL', u'CURRENCY': u'EUR', u'CCCTY': u'US', u'AAVCHECK': u'NO', u'BRAND': u'VISA', u'ACCEPTANCE': u'test123', u'ECI': u'7', u'TRXDATE': u'09/24/10', u'AMOUNT': u'6794.81', u'CVCCHECK': u'NO', u'ED': u'0111', u'PM': u'CreditCard'}
         params['SHASIGN'] = security.OgoneSignature(params,
                                 self.settings.HASH_METHOD,
-                                self.settings.SHA_POST_SECRET).signature()
+                                self.settings.SHA_POST_SECRET, out=True).signature()
 
         o = self.ogone(params, settings=self.settings)
         self.assert_(o.is_valid())
@@ -41,7 +41,7 @@ class OgoneTestCase(unittest.TestCase):
         params = {u'ORDERID': u'13', u'STATUS': u'9', u'CARDNO': u'XXXXXXXXXXXX1111', u'VC': u'NO', u'PAYID': u'8285812', u'CN': u'Kaast Achternaam', u'NCERROR': u'0', u'IP': u'82.139.114.10', u'IPCTY': u'NL', u'CURRENCY': u'EUR', u'CCCTY': u'US', u'AAVCHECK': u'NO', u'BRAND': u'VISA', u'ACCEPTANCE': u'test123', u'ECI': u'7', u'TRXDATE': u'09/24/10', u'AMOUNT': u'6794.81', u'CVCCHECK': u'NO', u'ED': u'0111', u'PM': u'CreditCard'}
         params['SHASIGN'] = security.OgoneSignature(params,
                                 self.settings.HASH_METHOD,
-                                self.settings.SHA_POST_SECRET).signature()
+                                self.settings.SHA_POST_SECRET, out=True).signature()
 
         o = self.ogone(params, settings=self.settings)
         o.parse_params()
