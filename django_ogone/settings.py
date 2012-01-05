@@ -25,7 +25,7 @@ CURRENCY = getattr(settings, 'OGONE_CURRENCY', 'EUR')
 HASH_METHOD = getattr(settings, 'OGONE_HASH_METHOD', 'sha512')
 #for other hashmethods see http://docs.python.org/library/hashlib.html
 #ogone default is sha1
-PRODUCTION = getattr(settings, 'OGONE_PRODUCTION') if hasattr(settings, 'OGONE_PRODCTION') \
+PRODUCTION = getattr(settings, 'OGONE_PRODUCTION') if hasattr(settings, 'OGONE_PRODUCTION') \
                 else not getattr(settings, 'DEBUG', True)
 
 
